@@ -1,0 +1,14 @@
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csprojAssemblyReference.cache
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.AssemblyInfoInputs.cache
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.AssemblyInfo.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.CoreCompileInputs.cache
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.deps.json
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.pdb
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Data.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Repository.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Data.pdb
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Repository.pdb
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.CopyComplete
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.pdb
