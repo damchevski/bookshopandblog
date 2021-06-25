@@ -17,8 +17,11 @@ namespace BSB.Data.Entity
         [Display(Name = "Product Price")]
         public float Price { get; set; }
         [Required]
-        [Display(Name = "Product for Rent or for Buy")]
+        [Display(Name = "Product for Buy ?")]
         public bool IsForBuy { get; set; }
+        [Required]
+        [Display(Name = "Book Genre")]
+        public string Genre { get; set; }
         public virtual ICollection<ProductInShoppingCart> ProductInShoppingCarts { get; set; }
         public IEnumerable<ProductInOrder> ProductInOrders { get; set; }
     }

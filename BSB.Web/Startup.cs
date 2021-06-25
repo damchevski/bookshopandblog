@@ -1,5 +1,8 @@
 using BSB.Data;
 using BSB.Data.Entity;
+using BSB.Repository.Implementation;
+using BSB.Repository.Interface;
+using BSB.Service.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,8 +32,10 @@ namespace BSB.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             //DI for Repositories
+            services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
 
             //DI for Services
+            services.AddTransient<IProductService, Service.Implementation.ProductService>();
 
 
             services.AddControllersWithViews();

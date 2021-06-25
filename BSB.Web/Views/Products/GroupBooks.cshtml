@@ -1,0 +1,34 @@
+﻿@model BSB.Data.Dto.GroupBooksDto
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    <div class="container">
+        <form asp-action="GroupBooks">
+            <select class="custom-select" id="Genre" name="Genre">
+                <option selected>Choose...</option>
+                @foreach(var opt in Model.Genres)
+            {
+                <option value="@opt">@opt</option>
+            }
+
+               
+            </select>
+
+            <input class="btn btn-primary" type="submit" value="Group Books"/>
+        </form>
+    </div>
+
+    <div class="container">
+        <ul>
+            @foreach (var book in Model.Products)
+            {
+                <li>@book.Name</li>
+            }
+        </ul>
+
+    </div>
+
+}

@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\" />
-    <Folder Include="Implementation\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BSB.Data\BSB.Data.csproj" />
     <ProjectReference Include="..\BSB.Repository\BSB.Repository.csproj" />
   </ItemGroup>
