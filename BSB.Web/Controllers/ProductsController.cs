@@ -9,6 +9,7 @@ using BSB.Data;
 using BSB.Data.Entity;
 using BSB.Service.Interface;
 using BSB.Data.Dto;
+using System.Security.Claims;
 
 namespace BSB.Web.Controllers
 {
@@ -40,6 +41,38 @@ namespace BSB.Web.Controllers
         {
             return View(await this._productService.GetAllProducts(SearchString, rent));
         }
+
+        public async Task<IActionResult> AddToShoppingCart(Guid? id)
+        {
+            var product = await this._productService.GetProduct(id);
+            AddToShoppingCartDto model = new AddToShoppingCartDto
+            {
+                SelectedProduct = product,
+                ProductId = product.Id,
+                Quantity = 1
+            };
+            return View(model);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddProductToCart([Bind("ProductId", "Quantity")] AddToShoppingCartDto item)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var result = await this._productService.AddToShoppingCart(item, userId);
+
+            if (result)
+            {
+                // TODO shopping cart view
+                return RedirectToAction("Index", "Products");
+            }
+
+            //todo add error
+            return View("Index", "Products");
+        }
+
 
         // GET: Products/Details/5
         public async Task<IActionResult> Details(Guid? id)

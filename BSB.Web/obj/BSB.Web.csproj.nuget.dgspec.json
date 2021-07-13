@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Web\\BSB.Web.csproj": {}
+    "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Web\\BSB.Web.csproj": {}
   },
   "projects": {
-    "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
+    "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj",
         "projectName": "BSB.Data",
-        "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj",
-        "packagesPath": "C:\\Users\\Damchevski\\.nuget\\packages\\",
-        "outputPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Visual Studio\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Damchevski\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,25 +64,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
+    "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj",
         "projectName": "BSB.Repository",
-        "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj",
-        "packagesPath": "C:\\Users\\Damchevski\\.nuget\\packages\\",
-        "outputPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Visual Studio\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Damchevski\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,8 +92,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
-                "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
+              "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
               }
             }
           }
@@ -130,25 +122,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Service\\BSB.Service.csproj": {
+    "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Service\\BSB.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Service\\BSB.Service.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Service\\BSB.Service.csproj",
         "projectName": "BSB.Service",
-        "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Service\\BSB.Service.csproj",
-        "packagesPath": "C:\\Users\\Damchevski\\.nuget\\packages\\",
-        "outputPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Service\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Service\\BSB.Service.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Visual Studio\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Damchevski\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -162,79 +150,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
-                "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
+              "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
               },
-              "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
-                "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Web\\BSB.Web.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
-        "projectName": "BSB.Web",
-        "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
-        "packagesPath": "C:\\Users\\Damchevski\\.nuget\\packages\\",
-        "outputPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Web\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Visual Studio\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Damchevski\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {
-              "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
-                "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
-              },
-              "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
-                "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj"
-              },
-              "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Service\\BSB.Service.csproj": {
-                "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Service\\BSB.Service.csproj"
+              "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj"
               }
             }
           }
@@ -249,6 +169,88 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.13.0, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.13.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Web\\BSB.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
+        "projectName": "BSB.Web",
+        "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
+              },
+              "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj"
+              },
+              "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Service\\BSB.Service.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Service\\BSB.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "GemBox.Document": {
+              "target": "Package",
+              "version": "[33.0.1249, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.16, )"
@@ -274,6 +276,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.58.0, )"
             }
           },
           "imports": [
@@ -294,7 +300,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -12,3 +12,45 @@ E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopa
 E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.CopyComplete
 E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.dll
 E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.pdb
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.deps.json
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.pdb
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Data.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Repository.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Data.pdb
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Repository.pdb
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.AssemblyInfo.cs
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.CopyComplete
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.pdb
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.AssemblyReference.cache
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.AssemblyInfoInputs.cache
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.AssemblyInfo.cs
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.CoreCompileInputs.cache
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.dll
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.pdb
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.deps.json
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.dll
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.pdb
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Data.dll
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Repository.dll
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Data.pdb
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Repository.pdb
+C:\Users\markom\Desktop\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.CopyComplete
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.deps.json
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.dll
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Service.pdb
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Data.dll
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Repository.dll
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Data.pdb
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\bin\Debug\netcoreapp3.1\BSB.Repository.pdb
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csprojAssemblyReference.cache
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.AssemblyInfoInputs.cache
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.AssemblyInfo.cs
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.csproj.CopyComplete
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.dll
+C:\Users\DELL\Downloads\bookshopandblog\BSB.Service\obj\Debug\netcoreapp3.1\BSB.Service.pdb

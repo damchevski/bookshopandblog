@@ -44,6 +44,7 @@ namespace BSB.Repository.Implementation
             return p;
         }
 
+
         public async Task<List<Product>> GetAll()
         {
             return await _context.Products.ToListAsync();
@@ -66,7 +67,7 @@ namespace BSB.Repository.Implementation
 
             return res;
         }
-
+       
         public async Task<List<Product>> GetAllRent()
         {
             return await _context.Products.Where(x => !x.IsForBuy).ToListAsync();
@@ -83,5 +84,55 @@ namespace BSB.Repository.Implementation
             return await _context.Products
                 .Where(x => x.Genre.Equals(Genre)).ToListAsync();
         }
+
+        public void Insert(ProductInShoppingCart entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");  
+            }
+            _context.Add(entity);
+            _context.SaveChanges();
+        }
+
+        public void Insert(Order entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            _context.Add(entity);
+            _context.SaveChanges();
+        }
+
+        public void Insert(ProductInOrder entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            _context.Add(entity);
+            _context.SaveChanges();
+        }
+
+        public void Insert(EmailMessage entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            _context.Add(entity);
+            _context.SaveChanges();
+        }
+
+        public void Update(ShoppingCart entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            _context.Update(entity);
+            _context.SaveChanges();
+        }
     }
-}
+    }

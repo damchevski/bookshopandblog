@@ -1,4 +1,5 @@
-﻿using BSB.Data.Entity;
+﻿using BSB.Data.Dto;
+using BSB.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,5 +16,9 @@ namespace BSB.Service.Interface
         Task<Product> DeleteProduct(Guid ?id);
         Task<List<Product>> GroupByGenres(string? Genre);
         Task<List<string>> GetAllGenres();
+
+        Task<AddToShoppingCartDto> GetShoppingCartInfo(Guid? id);
+
+        Task<bool> AddToShoppingCart(AddToShoppingCartDto item, string userID);
     }
 }

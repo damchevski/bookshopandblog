@@ -2,6 +2,7 @@ using BSB.Data;
 using BSB.Data.Entity;
 using BSB.Repository.Implementation;
 using BSB.Repository.Interface;
+using BSB.Service.Implementation;
 using BSB.Service.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,9 +34,17 @@ namespace BSB.Web
 
             //DI for Repositories
             services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
+            services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
+            services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+
+
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
 
             //DI for Services
-            services.AddTransient<IProductService, Service.Implementation.ProductService>();
+            services.AddTransient(typeof(IProductService), typeof(ProductService));
+            services.AddTransient(typeof(IOrderService), typeof(OrderService));
+            services.AddTransient(typeof(IShoppingCartService), typeof(ShoppingCartService));
+            /*services.AddTransient(typeof(IEmailService), typeof(EmailService));*/
 
 
             services.AddControllersWithViews();

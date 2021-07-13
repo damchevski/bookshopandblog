@@ -66,8 +66,8 @@
                     @Html.DisplayFor(modelItem => item.IsForBuy)
                 </td>
                 <td>
-                    <a class="btn btn-success" asp-action="AddToCart"
-                       asp-controller="ShoppingCart"
+                    <a class="btn btn-success" asp-action="AddToShoppingCart"
+                       asp-controller="Products"
                        asp-route-id="@item.Id">Add To Cart</a>
                 </td>
                 <td>
