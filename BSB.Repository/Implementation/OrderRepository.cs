@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BSB.Repository.Implementation
 {
@@ -20,22 +21,32 @@ namespace BSB.Repository.Implementation
             entities = context.Set<Order>();
         }
 
-        public List<Order> getAllOrders()
+        public async Task<List<Order>> getAllOrders()
         {
-            return entities
+            return await entities
                 .Include(z => z.User)
                 .Include(z => z.ProductInOrders)
                 .Include("ProductInOrders.Product")
-                .ToListAsync().Result;
+                .ToListAsync();
         }
 
-        public Order getOrderDetails(Base entity)
+        public async Task<Order> getOrderDetails(Base entity)
         {
-            return entities
+            return await entities
                .Include(z => z.User)
                .Include(z => z.ProductInOrders)
                .Include("ProductInOrders.Product")
-               .SingleOrDefaultAsync(z => z.Id == entity.Id).Result;
+               .SingleOrDefaultAsync(z => z.Id == entity.Id);
+        }
+
+        public void Insert(Order entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            this.context.Add(entity);
+            this.context.SaveChanges();
         }
     }
 }

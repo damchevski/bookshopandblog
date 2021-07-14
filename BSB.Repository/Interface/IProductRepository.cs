@@ -18,14 +18,7 @@ namespace BSB.Repository.Interface
         Task<Product> DeleteProduct(Guid id);
         Task<List<Product>> GroupByGenres(string Genre);
         Task<List<string>> GetAllGenres();
-
         void Insert(ProductInShoppingCart entity);
-
-        void Insert(Order entity);
-
-        void Insert(EmailMessage entity);
-
         void Insert(ProductInOrder entity);
-        void Update(ShoppingCart entity);
     }
 }

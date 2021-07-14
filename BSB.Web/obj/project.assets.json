@@ -1413,7 +1413,7 @@
           "System.Threading": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Collections.Specialized.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
@@ -2842,12 +2842,28 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Twilio/5.62.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "5.3.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Collections.Specialized": "4.3.0",
+          "System.IdentityModel.Tokens.Jwt": "5.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Twilio.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Twilio.dll": {}
+        }
+      },
       "BSB.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.12",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.12"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.12",
+          "Twilio": "5.62.0"
         },
         "compile": {
           "bin/placeholder/BSB.Data.dll": {}
@@ -2860,7 +2876,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "BSB.Data": "1.0.0"
+          "BSB.Data": "1.0.0",
+          "Twilio": "5.62.0"
         },
         "compile": {
           "bin/placeholder/BSB.Repository.dll": {}
@@ -2877,7 +2894,8 @@
           "BSB.Repository": "1.0.0",
           "MailKit": "2.13.0",
           "Microsoft.Extensions.Hosting.Abstractions": "5.0.0",
-          "MimeKit": "2.13.0"
+          "MimeKit": "2.13.0",
+          "Twilio": "5.62.0"
         },
         "compile": {
           "bin/placeholder/BSB.Service.dll": {}
@@ -9342,6 +9360,25 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Twilio/5.62.0": {
+      "sha512": "+pnxL80qA03fhnE/7XE9fW3RU4zSKtpGs2xn/YF6gpzhdMrgG7U96jBhn590StPqm51p/JojAoIPyqQ0cfiVYw==",
+      "type": "package",
+      "path": "twilio/5.62.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Twilio.dll",
+        "lib/net35/Twilio.xml",
+        "lib/net451/Twilio.dll",
+        "lib/net451/Twilio.xml",
+        "lib/netstandard1.4/Twilio.dll",
+        "lib/netstandard1.4/Twilio.xml",
+        "lib/netstandard2.0/Twilio.dll",
+        "lib/netstandard2.0/Twilio.xml",
+        "twilio.5.62.0.nupkg.sha512",
+        "twilio.nuspec"
+      ]
+    },
     "BSB.Data/1.0.0": {
       "type": "project",
       "path": "../BSB.Data/BSB.Data.csproj",
@@ -9370,23 +9407,29 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.15",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.15",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
-      "Stripe.net >= 39.58.0"
+      "Stripe.net >= 39.58.0",
+      "Twilio >= 5.62.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\markom\\.nuget\\packages\\": {}
+    "C:\\Users\\Damchevski\\.nuget\\packages\\": {},
+    "E:\\Visual Studio\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
+      "projectUniqueName": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
       "projectName": "BSB.Web",
-      "projectPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
-      "packagesPath": "C:\\Users\\markom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Web\\obj\\",
+      "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
+      "packagesPath": "C:\\Users\\Damchevski\\.nuget\\packages\\",
+      "outputPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Web\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "E:\\Visual Studio\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\markom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Damchevski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9400,14 +9443,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
-              "projectPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
+            "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
+              "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
             },
-            "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
-              "projectPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj"
+            "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
+              "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj"
             },
-            "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Service\\BSB.Service.csproj": {
-              "projectPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Service\\BSB.Service.csproj"
+            "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Service\\BSB.Service.csproj": {
+              "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Service\\BSB.Service.csproj"
             }
           }
         }
@@ -9455,6 +9498,10 @@
           "Stripe.net": {
             "target": "Package",
             "version": "[39.58.0, )"
+          },
+          "Twilio": {
+            "target": "Package",
+            "version": "[5.62.0, )"
           }
         },
         "imports": [
@@ -9475,7 +9522,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

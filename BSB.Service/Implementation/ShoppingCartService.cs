@@ -6,6 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using Twilio.Clients;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace BSB.Service.Implementation
 {
@@ -13,13 +17,26 @@ namespace BSB.Service.Implementation
     {
         private readonly IProductRepository productRepository;
         private readonly IUserRepository userRepository;
-
-        public ShoppingCartService(IProductRepository productRepository, IUserRepository userRepository)
+        private readonly IEmailService mailService;
+        private readonly IShoppingCartRepository shoppingCartRepository;
+        private readonly IEmailRepository emailRepository;
+        private readonly IOrderRepository orderRepository;
+        private readonly ITwilioRestClient smsClient;
+        public ShoppingCartService(IProductRepository productRepository, 
+            IUserRepository userRepository,
+            IEmailRepository emailRepository, IEmailService emailService,
+            IShoppingCartRepository shoppingCartRepository, IOrderRepository orderRepository,
+            ITwilioRestClient smsClient)
         {
+            this.smsClient = smsClient;
+            this.orderRepository = orderRepository;
+            this.shoppingCartRepository = shoppingCartRepository;
+            this.mailService = emailService;
             this.productRepository = productRepository;
             this.userRepository = userRepository;
+            this.emailRepository = emailRepository;
         }
-        public bool deleteProductFromShoppingCart(string userId, Guid id)
+        public async Task<bool> deleteProductFromShoppingCart(string userId, Guid id)
         {
             if (!string.IsNullOrEmpty(userId) && id != null)
             {
@@ -33,7 +50,7 @@ namespace BSB.Service.Implementation
 
                 userShoppingCart.ProductInShoppingCarts.Remove(itemToDelete);
 
-                this.productRepository.Update(userShoppingCart);
+                this.shoppingCartRepository.Update(userShoppingCart);
 
                 return true;
             }
@@ -41,7 +58,7 @@ namespace BSB.Service.Implementation
             return false;
         }
 
-        public ShoppingCartDto getShoppingCartInfo(string userId)
+        public async Task<ShoppingCartDto> getShoppingCartInfo(string userId)
         {
             var loggedInUser = this.userRepository.Get(userId);
 
@@ -75,7 +92,7 @@ namespace BSB.Service.Implementation
 
         }
 
-        public bool orderNow(string userId)
+        public async Task<bool> orderNow(string userId)
         {
             if (!string.IsNullOrEmpty(userId))
             {
@@ -97,7 +114,7 @@ namespace BSB.Service.Implementation
                     UserId = userId
                 };
 
-                this.productRepository.Insert(order);
+                this.orderRepository.Insert(order);
 
                 List<ProductInOrder> productInOrders = new List<ProductInOrder>();
 
@@ -107,7 +124,8 @@ namespace BSB.Service.Implementation
                     ProductId = z.Product.Id,
                     Product = z.Product,
                     OrderId = order.Id,
-                    Order = order
+                    Order = order,
+                    Quantity = z.Quantity
                 }).ToList();
 
                 StringBuilder sb = new StringBuilder();
@@ -129,7 +147,12 @@ namespace BSB.Service.Implementation
 
 
                 mail.Content = sb.ToString();
+                await this.emailRepository.Add(mail);
 
+                List<EmailMessage> mess = new List<EmailMessage>();
+                mess.Add(mail);
+
+                await this.mailService.SendEmailAsync(mess);
 
                 productInOrders.AddRange(result);
 
@@ -141,7 +164,12 @@ namespace BSB.Service.Implementation
                 loggedInUser.UserCart.ProductInShoppingCarts.Clear();
 
                 this.userRepository.Update(loggedInUser);
-                this.productRepository.Insert(mail);
+
+                var message = MessageResource.Create(
+                to: new PhoneNumber(loggedInUser.PhoneNumber),
+                from: new PhoneNumber("+13462144811"),
+                body: "You make successfull order! Total Price: "+totalPrice ,
+                client: smsClient); 
 
                 return true;
             }

@@ -22,5 +22,7 @@ namespace BSB.Data.Dto
         public string LastName { get; set; }
         [Required(ErrorMessage = "Address is required")]
         public string Address { get; set; }
+        [Required(ErrorMessage = "PhoneNumber is required")]
+        public string PhoneNumber { get; set; }
     }
 }

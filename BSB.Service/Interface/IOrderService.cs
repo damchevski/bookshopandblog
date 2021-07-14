@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BSB.Service.Interface
 {
     public interface IOrderService
     {
-        List<Order> getAllOrders();
-        Order getOrderDetails(Base entity);
+        Task<List<Order>> getAllOrders();
+        Task<Order> getOrderDetails(Base entity);
     }
 }

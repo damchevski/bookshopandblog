@@ -962,3 +962,20 @@ C:\Users\markom\Source\Repos\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\BSB
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\BSB.Web.dll
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\BSB.Web.pdb
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\BSB.Web.genruntimeconfig.cache
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\GemBox.Document.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\MailKit.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\MimeKit.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Stripe.net.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\GemBox.Document.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Order\Details.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Order\GetOrders.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Products\AddToShoppingCart.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\GetCartInfo.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Twilio.dll

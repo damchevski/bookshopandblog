@@ -42,6 +42,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "3.1.15",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
           "Stripe.net": "39.58.0",
+          "Twilio": "5.62.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -2489,10 +2490,28 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "Twilio/5.62.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "5.5.0",
+          "Newtonsoft.Json": "12.0.2",
+          "System.Collections.Specialized": "4.3.0",
+          "System.IdentityModel.Tokens.Jwt": "5.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Twilio.dll": {
+            "assemblyVersion": "5.62.0.0",
+            "fileVersion": "5.62.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Twilio.dll": {}
+        }
+      },
       "BSB.Data/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.16",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.15"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.15",
+          "Twilio": "5.62.0"
         },
         "runtime": {
           "BSB.Data.dll": {}
@@ -2503,7 +2522,8 @@
       },
       "BSB.Repository/1.0.0": {
         "dependencies": {
-          "BSB.Data": "1.0.0"
+          "BSB.Data": "1.0.0",
+          "Twilio": "5.62.0"
         },
         "runtime": {
           "BSB.Repository.dll": {}
@@ -2518,7 +2538,8 @@
           "BSB.Repository": "1.0.0",
           "MailKit": "2.13.0",
           "Microsoft.Extensions.Hosting.Abstractions": "5.0.0",
-          "MimeKit": "2.13.0"
+          "MimeKit": "2.13.0",
+          "Twilio": "5.62.0"
         },
         "runtime": {
           "BSB.Service.dll": {}
@@ -5345,6 +5366,13 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Twilio/5.62.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+pnxL80qA03fhnE/7XE9fW3RU4zSKtpGs2xn/YF6gpzhdMrgG7U96jBhn590StPqm51p/JojAoIPyqQ0cfiVYw==",
+      "path": "twilio/5.62.0",
+      "hashPath": "twilio.5.62.0.nupkg.sha512"
     },
     "BSB.Data/1.0.0": {
       "type": "project",

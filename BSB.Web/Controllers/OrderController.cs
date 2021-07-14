@@ -25,7 +25,7 @@ namespace BSB.Web.Controllers
         }
        
 
-        public IActionResult Details(Guid id)
+        public async Task<IActionResult> Details(Guid id)
         {
             //HttpClient client = new HttpClient();
 
@@ -47,7 +47,7 @@ namespace BSB.Web.Controllers
             Base baseEntity = new Base();
             baseEntity.Id = id;
 
-            Order result = this._orderService.getOrderDetails(baseEntity);
+            Order result = await this._orderService.getOrderDetails(baseEntity);
 
 
             return View(result);
@@ -59,7 +59,7 @@ namespace BSB.Web.Controllers
         {
             BSBUser user = await this.userManager.GetUserAsync(User);
 
-            List<Order> orders = this._orderService.getAllOrders();
+            List<Order> orders = await this._orderService.getAllOrders();
 
             List<Order> userOrders = new List<Order>();
 

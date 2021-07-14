@@ -4,6 +4,7 @@ using BSB.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BSB.Service.Implementation
 {
@@ -16,14 +17,14 @@ namespace BSB.Service.Implementation
             this.orderRepository = orderRepository;
 
         }
-        public List<Order> getAllOrders()
+        public async Task<List<Order>> getAllOrders()
         {
-            return this.orderRepository.getAllOrders();
+            return await this.orderRepository.getAllOrders();
         }
 
-        public Order getOrderDetails(Base entity)
+        public async Task<Order> getOrderDetails(Base entity)
         {
-            return this.orderRepository.getOrderDetails(entity);
+            return await this.orderRepository.getOrderDetails(entity);
         }
     }
 }

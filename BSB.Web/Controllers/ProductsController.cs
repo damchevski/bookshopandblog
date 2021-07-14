@@ -66,11 +66,11 @@ namespace BSB.Web.Controllers
             if (result)
             {
                 // TODO shopping cart view
-                return RedirectToAction("Index", "Products");
+                return RedirectToAction("GetCartInfo", "ShoppingCart");
             }
 
             //todo add error
-            return View("Index", "Products");
+            return RedirectToAction("Index", "Products");
         }
 
 

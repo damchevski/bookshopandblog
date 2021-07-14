@@ -17,17 +17,17 @@ namespace BSB.Web.Controllers
         {
             this.shoppingCartService = shoppingCartService;
         }
-        public IActionResult GetCartInfo()
+        public async Task< IActionResult> GetCartInfo()
         {
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            return View(this.shoppingCartService.getShoppingCartInfo(userId));
+            return View(await this.shoppingCartService.getShoppingCartInfo(userId));
         }
-        public IActionResult DeleteFromShoppingCart(Guid id)
+        public async Task<IActionResult> DeleteFromShoppingCart(Guid id)
         {
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var result = this.shoppingCartService.deleteProductFromShoppingCart(userId, id);
+            var result = await this.shoppingCartService.deleteProductFromShoppingCart(userId, id);
 
             if (result)
             {
@@ -39,13 +39,13 @@ namespace BSB.Web.Controllers
             }
         }
 
-        public IActionResult PayOrder(string stripeEmail, string stripeToken)
+        public async Task<IActionResult> PayOrder(string stripeEmail, string stripeToken)
         {
             var customerService = new CustomerService();
             var chargeService = new ChargeService();
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var order = this.shoppingCartService.getShoppingCartInfo(userId);
+            var order = await this.shoppingCartService.getShoppingCartInfo(userId);
 
             var customer = customerService.Create(new CustomerCreateOptions
             {
@@ -63,7 +63,7 @@ namespace BSB.Web.Controllers
 
             if (charge.Status == "succeeded")
             {
-                var result = this.Order();
+                var result = await this.Order();
 
                 if (result)
                 {
@@ -77,11 +77,11 @@ namespace BSB.Web.Controllers
 
             return RedirectToAction("Index", "Products");
         }
-        private Boolean Order()
+        private async Task<bool> Order()
         {
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var result = this.shoppingCartService.orderNow(userId);
+            var result = await this .shoppingCartService.orderNow(userId);
 
             return result;
         }

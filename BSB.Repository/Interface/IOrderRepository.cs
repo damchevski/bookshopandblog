@@ -2,13 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BSB.Repository.Interface
 {
     public interface IOrderRepository
     {
-        List<Order> getAllOrders();
+        Task<List<Order>> getAllOrders();
 
-        Order getOrderDetails(Base entity);
+        Task<Order> getOrderDetails(Base entity);
+        void Insert(Order entity);
+
     }
 }

@@ -49,6 +49,7 @@ namespace BSB.Web.Controllers
                             PhoneNumberConfirmed = true,
                             FristName = request.FirstName,
                             LastName = request.LastName,
+                            PhoneNumber = request.PhoneNumber,
                             Address = request.Address,
                             UserCart = new ShoppingCart()
                      };

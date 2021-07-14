@@ -95,16 +95,6 @@ namespace BSB.Repository.Implementation
             _context.SaveChanges();
         }
 
-        public void Insert(Order entity)
-        {
-            if (entity == null)
-            {
-                throw new ArgumentNullException("entity");
-            }
-            _context.Add(entity);
-            _context.SaveChanges();
-        }
-
         public void Insert(ProductInOrder entity)
         {
             if (entity == null)
@@ -115,24 +105,6 @@ namespace BSB.Repository.Implementation
             _context.SaveChanges();
         }
 
-        public void Insert(EmailMessage entity)
-        {
-            if (entity == null)
-            {
-                throw new ArgumentNullException("entity");
-            }
-            _context.Add(entity);
-            _context.SaveChanges();
-        }
 
-        public void Update(ShoppingCart entity)
-        {
-            if (entity == null)
-            {
-                throw new ArgumentNullException("entity");
-            }
-            _context.Update(entity);
-            _context.SaveChanges();
-        }
     }
-    }
+}
