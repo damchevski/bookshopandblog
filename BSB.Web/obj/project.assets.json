@@ -9374,19 +9374,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\markom\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
+      "projectUniqueName": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
       "projectName": "BSB.Web",
-      "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Web\\obj\\",
+      "projectPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Web\\BSB.Web.csproj",
+      "packagesPath": "C:\\Users\\markom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\markom\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9400,14 +9400,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
+            "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
+              "projectPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
             },
-            "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj"
+            "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj": {
+              "projectPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj"
             },
-            "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Service\\BSB.Service.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Downloads\\bookshopandblog\\BSB.Service\\BSB.Service.csproj"
+            "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Service\\BSB.Service.csproj": {
+              "projectPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Service\\BSB.Service.csproj"
             }
           }
         }
@@ -9475,7 +9475,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

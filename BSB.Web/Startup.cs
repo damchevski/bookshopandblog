@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Stripe;
 
 namespace BSB.Web
 {
@@ -41,8 +41,8 @@ namespace BSB.Web
             services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
 
             //DI for Services
-            services.AddTransient(typeof(IProductService), typeof(ProductService));
-            services.AddTransient(typeof(IOrderService), typeof(OrderService));
+            services.AddTransient(typeof(IProductService), typeof(BSB.Service.Implementation.ProductService));
+            services.AddTransient(typeof(IOrderService), typeof(BSB.Service.Implementation.OrderService));
             services.AddTransient(typeof(IShoppingCartService), typeof(ShoppingCartService));
             /*services.AddTransient(typeof(IEmailService), typeof(EmailService));*/
 
@@ -54,6 +54,9 @@ namespace BSB.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            StripeConfiguration.ApiKey = Configuration.GetSection("Stripe")["SecretKey"];
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

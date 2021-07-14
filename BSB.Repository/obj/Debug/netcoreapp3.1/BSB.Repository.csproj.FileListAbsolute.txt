@@ -46,3 +46,15 @@ C:\Users\DELL\Downloads\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\B
 C:\Users\DELL\Downloads\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.csproj.CopyComplete
 C:\Users\DELL\Downloads\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.dll
 C:\Users\DELL\Downloads\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.pdb
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Repository.deps.json
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Repository.dll
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Repository.pdb
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Data.dll
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Data.pdb
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.csproj.AssemblyReference.cache
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.AssemblyInfoInputs.cache
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.AssemblyInfo.cs
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.csproj.CoreCompileInputs.cache
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.csproj.CopyComplete
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.dll
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.pdb

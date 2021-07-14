@@ -34,7 +34,7 @@ namespace BSB.Repository.Implementation
             return entities
                .Include(z => z.User)
                .Include(z => z.ProductInOrders)
-               .Include("ProductInOrders.OrderedProduct")
+               .Include("ProductInOrders.Product")
                .SingleOrDefaultAsync(z => z.Id == entity.Id).Result;
         }
     }

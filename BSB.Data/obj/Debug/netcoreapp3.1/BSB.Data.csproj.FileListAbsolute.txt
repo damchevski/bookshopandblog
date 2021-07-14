@@ -34,3 +34,12 @@ C:\Users\DELL\Downloads\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Dat
 C:\Users\DELL\Downloads\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Downloads\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.dll
 C:\Users\DELL\Downloads\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.pdb
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\bin\Debug\netcoreapp3.1\BSB.Data.deps.json
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\bin\Debug\netcoreapp3.1\BSB.Data.dll
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\bin\Debug\netcoreapp3.1\BSB.Data.pdb
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.csproj.AssemblyReference.cache
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.AssemblyInfoInputs.cache
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.AssemblyInfo.cs
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.csproj.CoreCompileInputs.cache
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.dll
+C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.pdb
