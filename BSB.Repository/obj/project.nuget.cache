@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "cLsxNJM/Na0jeEIi3v/PFsl6O4oldaCN7K9v2KOTISwrAOCTIvrQ3vWEpAA/sY4bXYoMd7wYAdbdZ90exlFZ9g==",
+=======
+  "dgSpecHash": "v95WYoJeRE84L7P1vDgL0tfAr1wK8Ke6hPhArYNIxss57BGTUnYV57oa/Q0zAXHG90hWNrssep1hlMO+thQ/xw==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj",
   "expectedPackageFiles": [

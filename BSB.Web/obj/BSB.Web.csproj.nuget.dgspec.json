@@ -68,7 +68,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
         }
       }
     },
@@ -132,7 +136,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
         }
       }
     },
@@ -211,7 +219,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
         }
       }
     },
@@ -318,7 +330,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
         }
       }
     }
