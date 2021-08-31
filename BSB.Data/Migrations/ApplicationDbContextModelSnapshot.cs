@@ -93,6 +93,71 @@ namespace BSB.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("BSB.Data.Entity.Comment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ByUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ByUserId");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.CommentInPost", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CommentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CommentId1")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PostId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.HasIndex("CommentId1")
+                        .IsUnique();
+
+                    b.ToTable("CommentInPosts");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.CommentInUser", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CommentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CommentInUsers");
+                });
+
             modelBuilder.Entity("BSB.Data.Entity.EmailMessage", b =>
                 {
                     b.Property<Guid>("Id")
@@ -130,6 +195,31 @@ namespace BSB.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.Post", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ByUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Likes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Topic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ByUserId");
+
+                    b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("BSB.Data.Entity.Product", b =>
@@ -362,11 +452,53 @@ namespace BSB.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("BSB.Data.Entity.Comment", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.BSBUser", "ByUser")
+                        .WithMany()
+                        .HasForeignKey("ByUserId");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.CommentInPost", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.Post", "Post")
+                        .WithMany("CommentsInPost")
+                        .HasForeignKey("CommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BSB.Data.Entity.Comment", "Comment")
+                        .WithOne("CommentInPost")
+                        .HasForeignKey("BSB.Data.Entity.CommentInPost", "CommentId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.CommentInUser", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.Comment", "Comment")
+                        .WithMany()
+                        .HasForeignKey("CommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BSB.Data.Entity.BSBUser", "User")
+                        .WithMany("Comments")
+                        .HasForeignKey("UserId");
+                });
+
             modelBuilder.Entity("BSB.Data.Entity.Order", b =>
                 {
                     b.HasOne("BSB.Data.Entity.BSBUser", "User")
                         .WithMany("Orders")
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.Post", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.BSBUser", "ByUser")
+                        .WithMany("Posts")
+                        .HasForeignKey("ByUserId");
                 });
 
             modelBuilder.Entity("BSB.Data.Entity.ProductInOrder", b =>

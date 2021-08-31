@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<BSB.Data.Entity.Product>
 
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<BSB.Data.Entity.BSBUser> SignInManager
+@inject UserManager<BSB.Data.Entity.BSBUser> UserManager
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -13,18 +17,18 @@
 <p>
     <form asp-controller="Products" asp-action="Index">
         <p>
-    Book Name: <input type="text" name="SearchString" />
-    <input placeholder="Book Name" class="btn btn-secondary" type="submit" value="Filter" />
+            Book Name: <input type="text" name="SearchString" />
+            <input placeholder="Book Name" class="btn btn-secondary" type="submit" value="Filter" />
         </p>
     </form>
 
 </p>
 
-        <p>
-            <a class="btn btn-primary" asp-action="Index">All Books</a>
-            <a class="btn btn-primary" asp-action="Index" asp-route-rent="true">Buy Books</a>
-            <a class="btn btn-primary" asp-action="Index" asp-route-rent="false">Rent Books</a>
-        </p>
+<p>
+    <a class="btn btn-primary" asp-action="Index">All Books</a>
+    <a class="btn btn-primary" asp-action="Index" asp-route-rent="true">Buy Books</a>
+    <a class="btn btn-primary" asp-action="Index" asp-route-rent="false">Rent Books</a>
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -47,8 +51,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
+        @foreach (var item in Model) {
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)

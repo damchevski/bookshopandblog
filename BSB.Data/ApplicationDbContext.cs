@@ -17,6 +17,11 @@ namespace BSB.Data
         public virtual DbSet<ProductInShoppingCart> ProductInShoppingCarts { get; set; }
         public virtual DbSet<ProductInOrder> ProductInOrders { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
+        public virtual DbSet<CommentInPost> CommentInPosts { get; set; }
+        public virtual DbSet<CommentInUser> CommentInUsers { get; set; }
+
 
         public virtual DbSet<EmailMessage> EmailMessages { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
@@ -47,7 +52,6 @@ namespace BSB.Data
                 .WithOne(z => z.UserCart)
                 .HasForeignKey<ShoppingCart>(z => z.UserId);
 
-
             builder.Entity<ProductInOrder>()
                 .HasOne(z => z.Product)
                 .WithMany(z => z.ProductInOrders)
@@ -57,6 +61,21 @@ namespace BSB.Data
                 .HasOne(z => z.Order)
                 .WithMany(z => z.ProductInOrders)
                 .HasForeignKey(z => z.ProductId);
+
+            builder.Entity<CommentInPost>()
+                .HasOne(z => z.Post)
+                .WithMany(z => z.CommentsInPost)
+                .HasForeignKey(z => z.CommentId);
+
+            builder.Entity<CommentInUser>()
+                .HasOne<BSBUser>(z => z.User)
+                .WithMany(z => z.Comments)
+                .HasForeignKey(z => z.UserId);
+
+            builder.Entity<Post>()
+                .HasOne<BSBUser>(z => z.ByUser)
+                .WithMany(z => z.Posts)
+                .HasForeignKey(z => z.ByUserId);
         }
     }
     }

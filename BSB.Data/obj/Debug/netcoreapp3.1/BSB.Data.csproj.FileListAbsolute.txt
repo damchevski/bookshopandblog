@@ -43,3 +43,4 @@ C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BS
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.csproj.CoreCompileInputs.cache
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.dll
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.pdb
+C:\Users\markom\source\repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.GeneratedMSBuildEditorConfig.editorconfig

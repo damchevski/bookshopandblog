@@ -44,6 +44,8 @@ namespace BSB.Web
             services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
             services.AddScoped(typeof(IEmailRepository), typeof(EmailRepository));
             services.AddScoped(typeof(IShoppingCartRepository), typeof(ShoppingCartRepository));
+            services.AddScoped(typeof(IPostRepository), typeof(PostRepository));
+            services.AddScoped(typeof(ICommentRepository), typeof(CommentRepository));
 
             //Sms Configuration
             services.AddHttpClient<ITwilioRestClient, TwilioClient>();
@@ -55,6 +57,9 @@ namespace BSB.Web
             services.AddTransient(typeof(IProductService), typeof(BSB.Service.Implementation.ProductService));
             services.AddTransient(typeof(IOrderService), typeof(BSB.Service.Implementation.OrderService));
             services.AddTransient(typeof(IShoppingCartService), typeof(BSB.Service.Implementation.ShoppingCartService));
+            services.AddTransient(typeof(IPostService), typeof(PostService));
+            services.AddTransient(typeof(ICommentService), typeof(CommentService));
+
             services.AddScoped<IEmailService, EmailService>(email => new EmailService(emailService));
 
             services.AddScoped<EmailSettings>(es => emailService);
