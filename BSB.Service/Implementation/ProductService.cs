@@ -90,7 +90,7 @@ namespace BSB.Service.Implementation
             return await this._productRepository.GetAllGenres();
         }
 
-        public  async Task<List<Product>> GetAllProducts(string? SearchString, bool? rent)
+        public async Task<List<Product>> GetAllProducts(string? SearchString, bool? rent)
         {
             var result = new List<Product>();
 

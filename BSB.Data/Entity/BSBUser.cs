@@ -12,5 +12,7 @@ namespace BSB.Data.Entity
         public string Address { get; set; }
         public virtual ShoppingCart UserCart { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
+        public virtual ICollection<CommentInUser> Comments { get; set; }
     }
 }

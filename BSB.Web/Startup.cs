@@ -4,8 +4,10 @@ using BSB.Repository.Implementation;
 using BSB.Repository.Interface;
 using BSB.Service.Implementation;
 using BSB.Service.Interface;
+using BSB.Web.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -44,6 +46,8 @@ namespace BSB.Web
             services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
             services.AddScoped(typeof(IEmailRepository), typeof(EmailRepository));
             services.AddScoped(typeof(IShoppingCartRepository), typeof(ShoppingCartRepository));
+            services.AddScoped(typeof(IPostRepository), typeof(PostRepository));
+            services.AddScoped(typeof(ICommentRepository), typeof(CommentRepository));
 
             //Sms Configuration
             services.AddHttpClient<ITwilioRestClient, TwilioClient>();
@@ -55,9 +59,20 @@ namespace BSB.Web
             services.AddTransient(typeof(IProductService), typeof(BSB.Service.Implementation.ProductService));
             services.AddTransient(typeof(IOrderService), typeof(BSB.Service.Implementation.OrderService));
             services.AddTransient(typeof(IShoppingCartService), typeof(BSB.Service.Implementation.ShoppingCartService));
+            services.AddTransient(typeof(IPostService), typeof(PostService));
+            services.AddTransient(typeof(ICommentService), typeof(CommentService));
+
             services.AddScoped<IEmailService, EmailService>(email => new EmailService(emailService));
 
             services.AddScoped<EmailSettings>(es => emailService);
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+            services.AddSignalR();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
@@ -82,6 +97,11 @@ namespace BSB.Web
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<ChatHub>("/Chat/Index");
+            });
 
             app.UseRouting();
 

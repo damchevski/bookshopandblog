@@ -1,0 +1,65 @@
+﻿@model List<BSB.Data.ConnectionMapping>
+<h3>Welcome To Public Chat</h3>
+@{
+    string url = "https://cdn.jsdelivr.net/npm/@aspnet/signalr@1.0.0-rc1-update1/dist/browser/signalr.min.js";
+
+}
+<div class="signalr-demo">
+    <div id="senderUId">@Model.Where(x=>x.ConnectionId == null).FirstOrDefault().UserId</div>
+    <form id="messageform">
+        <input type="text" id="messagebox" />
+        <input type="button" value="Send Message" id="btnSend" />
+    </form>
+    <hr />
+    <ul id="messageList" style="text-align:left;"></ul>
+</div>
+
+<script src="@url"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("https://localhost:44327/Chat/Index")
+        .build();
+    connection.start()
+        .catch(err => alert(err.toString()));
+</script>
+
+<script>
+    connection.on('UserConnected', (ConnectionId) => {
+        let _message = " Connected " + ConnectionId;
+        let sender = $('#senderUId').text();
+        appendLine(sender, _message);
+    });
+    connection.on('UserDisconnected', (ConnectionId) => {
+        let _message = " Disconnected " + ConnectionId;
+        let sender = $('#senderUId').text();
+        appendLine(sender, _message);
+    });
+    connection.on("ReceiveMessage", (message, senderId) => {
+        appendLine(senderId, message)
+    });
+
+    $(document).ready(function () {
+        $("#btnSend").click(function (e) {
+            let message = $('#messagebox').val();
+            let sender = $('#senderUId').text();
+            $('#messagebox').val('');
+            connection.invoke('SendMessage', sender, message);
+            e.preventDefault();
+        });
+    });
+    function appendLine(uid, message) {
+        console.log(uid)
+        console.log(message)
+        let nameElement = document.createElement('strong');
+        nameElement.innerText = `${uid}:`;
+        let msgElement = document.createElement('em');
+        msgElement.innerText = ` ${message}`;
+        let li = document.createElement('li');
+        li.appendChild(nameElement);
+        li.appendChild(msgElement);
+        $('#messageList').append(li);
+    };
+</script>
+

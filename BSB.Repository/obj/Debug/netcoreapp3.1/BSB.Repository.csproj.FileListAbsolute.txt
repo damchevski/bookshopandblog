@@ -58,3 +58,4 @@ C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.csproj.CopyComplete
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.dll
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.pdb
+C:\Users\markom\source\repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.GeneratedMSBuildEditorConfig.editorconfig
