@@ -16,10 +16,12 @@ namespace BSB.Web.Controllers
     public class PostsController : Controller
     {
         private readonly IPostService _postService;
+        private readonly ICommentService _commentService;
 
-        public PostsController(IPostService postService)
+        public PostsController(IPostService postService, ICommentService commentService)
         {
             _postService = postService;
+            _commentService = commentService;
         }
 
         // GET: Posts
@@ -170,6 +172,24 @@ namespace BSB.Web.Controllers
             var post = await this._postService.Like(postId);
 
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> DeleteComment(Guid? id, Guid? postid)
+        {
+            if (id == null || postid == null)
+            {
+                return NotFound();
+            }
+
+            var result = await this._commentService.DeleteComment(id);
+
+            if (result != null)
+            {
+
+                return View("Details",await this._postService.GetPost(postid));
+            }
+
+            return RedirectToAction("Index");
         }
 
     }

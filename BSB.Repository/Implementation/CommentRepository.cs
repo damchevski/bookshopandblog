@@ -35,6 +35,7 @@ namespace BSB.Repository.Implementation
             _context.Comments.Remove(Comment);
             await _context.SaveChangesAsync();
 
+
             return Comment;
         }
 

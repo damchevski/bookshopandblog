@@ -986,3 +986,11 @@ C:\Users\markom\source\repos\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Raz
 C:\Users\markom\source\repos\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Details.cshtml.g.cs
 C:\Users\markom\source\repos\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Edit.cshtml.g.cs
 C:\Users\markom\source\repos\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Index.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Create.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Delete.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Details.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Edit.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Index.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Chat\Index.cshtml.g.cs
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Core.dll
+E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Client.dll

@@ -44,23 +44,28 @@
             <p class="card-text">@post.Content</p>
 
             <div>
-                <h6>
-                    @post.Likes Likes
-                </h6>
-                <a asp-action="Like" asp-route-postId="@post.Id" class="card-link btn btn-outline-secondary">Like post</a>
-            </div>
-            <div>
-                <h6>@post.CommentsInPost.Count Comments</h6>
-                <a asp-action="Details" asp-route-id="@post.Id" class="card-link btn btn-outline-secondary">View Comments</a>
+                <div style="float:left">
+                    <h6>
+                        @post.Likes Likes
+                    </h6>
+                    <a asp-action="Like" asp-route-postId="@post.Id" class="card-link btn btn-outline-secondary">Like post</a>
+                </div>
+                <div style="float:left; margin-left: 10px">
+                    <h6>@post.CommentsInPost.Count Comments</h6>
+                    <a asp-action="Details" asp-route-id="@post.Id" class="card-link btn btn-outline-secondary">View Comments</a>
+                </div>
             </div>
 
             @if (UserManager.GetUserId(User).Equals(post.ByUser.Id)) {
-                <div>
-                    <a asp-controller="Posts" asp-action="Edit" asp-route-id="@post.Id" class="btn btn-info">Edit</a>
-                </div>
-                <div>
-                    <a asp-controller="Posts" asp-action="Delete" asp-route-id="@post.Id" class="btn btn-danger">Deletes</a>
-                </div>
+        <div> 
+            <br /><br /><br />
+            <div style="float: left">
+                <a asp-controller="Posts" asp-action="Edit" asp-route-id="@post.Id" class="btn btn-info">Edit</a>
+            </div>
+            <div style="float: left;margin-left: 10px">
+                <a asp-controller="Posts" asp-action="Delete" asp-route-id="@post.Id" class="btn btn-danger">Deletes</a>
+            </div>
+        </div>
             }
         </div>
     </div>

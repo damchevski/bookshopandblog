@@ -3,8 +3,11 @@
 @inject UserManager<BSB.Data.Entity.BSBUser> UserManager
 
 <ul class="navbar-nav">
-    @if (SignInManager.IsSignedIn(User)) 
+    @if (SignInManager.IsSignedIn(User))
     {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Chat" asp-action="Index" title="Posts">Chat</a>
+        </li>
         <li class="nav-item">
             <a class="nav-link text-dark" asp-controller="Posts" asp-action="Index" title="Posts">Blog</a>
         </li>
@@ -23,7 +26,8 @@
             </form>
         </li>
     }
-    else {
+    else
+    {
         <li class="nav-item">
             <a class="nav-link text-dark" asp-controller="account" asp-action="Register">Register</a>
         </li>
