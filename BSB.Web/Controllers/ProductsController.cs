@@ -10,6 +10,7 @@ using BSB.Data.Entity;
 using BSB.Service.Interface;
 using BSB.Data.Dto;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BSB.Web.Controllers
 {

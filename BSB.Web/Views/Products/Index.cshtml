@@ -8,77 +8,99 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Book Shop:</h1>
 
-<p>
-    <a class="btn btn-primary" asp-action="Create">Create Book</a>
-    <a class="btn btn-primary" asp-action="GroupBooks">Group Books into Genres</a>
-</p>
-<p>
-    <form asp-controller="Products" asp-action="Index">
-        <p>
-            Book Name: <input type="text" name="SearchString" />
-            <input placeholder="Book Name" class="btn btn-secondary" type="submit" value="Filter" />
-        </p>
-    </form>
+<div class="container text-center">
 
-</p>
+    <div class="controls">
 
-<p>
-    <a class="btn btn-primary" asp-action="Index">All Books</a>
-    <a class="btn btn-primary" asp-action="Index" asp-route-rent="true">Buy Books</a>
-    <a class="btn btn-primary" asp-action="Index" asp-route-rent="false">Rent Books</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Image)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Genre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsForBuy)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model) {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    <img width="140" height="80" src="@item.Image" />
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Genre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsForBuy)
-                </td>
-                <td>
-                    <a class="btn btn-success" asp-action="AddToShoppingCart"
-                       asp-controller="Products"
-                       asp-route-id="@item.Id">Add To Cart</a>
-                </td>
-                <td>
-                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
+        <div class="container">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <a class="btn btn-primary" asp-action="GroupBooks">Group Books into Genres</a>
+            }
+
+            @if (User.IsInRole("Admin"))
+            {
+                <a class="btn btn-primary" asp-action="Create">Create Book</a>
+            }
+            <br />
+        </div>
+
+        <div class="container text-center">
+            
+        <form asp-controller="Products" asp-action="Index">
+            <div class="m-2 text-center">
+                <div style="float: left; margin-left: 378px" >
+                    <input style="width: 200px;"
+                           placeholder="Book Name"
+                           class="form-control"
+                           type="text" name="SearchString" />
+                </div>
+                <div style="float:left;" class="ml-2">
+                    <input class="btn btn-outline-primary"
+                           type="submit" value="Filter" />
+                </div>
+                <br /><br />
+            </div>
+        </form>
+
+        </div>
+
+        <div class="container text-center">
+            <a class="btn btn-primary" asp-action="Index">All Books</a>
+            <a class="btn btn-primary" asp-action="Index" asp-route-rent="true">Buy Books</a>
+            <a class="btn btn-primary" asp-action="Index" asp-route-rent="false">Rent Books</a>
+
+        </div>
+    </div>
+
+
+
+    <div style="width: 1200px" class="text-center">
+        @foreach (var item in Model)
+        {
+            <div class="card text-center" style="width: 16rem; height: 25rem; float: left; margin: 3px">
+                <img class="card-img-top" src="@item.Image alt="Product image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">Price: @item.Price $</p>
+                    <p class="card-text">Book Genre: @item.Genre</p>
+                    @if (item.IsForBuy)
+                    {
+                        <p class="card-text">This product is for buying</p>
+                    }
+                    else
+                    {
+                        <p class="card-text">This product is for renting</p>
+                    }
+
+
+
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <p class="card-text">
+                            <a class="btn btn-outline-primary" asp-action="AddToShoppingCart"
+                               asp-controller="Products"
+                               asp-route-id="@item.Id">Add To Cart</a>
+                        </p>
+                    }
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <p class="card-text">
+                            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </p>
+                    }
+
+                </div>
+            </div>
         }
-    </tbody>
-</table>
+    </div>
+
+
+
+</div>
+
+
