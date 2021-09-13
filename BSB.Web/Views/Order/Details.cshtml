@@ -2,34 +2,30 @@
 
 <div class="container">
 
-    <p>
-        <a class="btn btn-success">@Model.User.UserName</a>
-    </p>
+    <h4 style="text-align: center">Order details for user: @Model.User.Email</h4>
 
-    @for (int i = 0; i < Model.ProductInOrders.Count(); i++)
-    {
-        var item = Model.ProductInOrders.ElementAt(i).Product;
-
-        if (i % 3 == 0)
+    <div style="width: 1200px" class="text-center">
+        @foreach (var item in Model.ProductInOrders)
         {
-            @:<div class="row">
-            }
+            <div class="card text-center" style="width: 16rem; height: 20rem;display:inline-block; margin: 3px">
+                <img class="card-img-top" src="@item.Product.Image alt="Product image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Product.Name</h5>
+                    <p class="card-text">Book Genre: @item.Product.Genre</p>
+                    @if (item.Product.IsForBuy)
+                    {
+                        <p class="card-text">This product is for buying</p>
+                    }
+                    else
+                    {
+                        <p class="card-text">This product is for renting</p>
+                    }
 
-            <div class="col-md-3 m-4">
-                <div class="card" style="width: 18rem; height: 30rem;">
-                    <img class="card-img-top" style="height: 70%" src="@item.Image" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>@item.Genre</h3>
-                        <p>@item.Name</p>
-                    </div>
 
                 </div>
             </div>
-
-            if (i % 3 == 2)
-            {
-            @:</div>
         }
+    </div>
 
-    }
+
 </div>

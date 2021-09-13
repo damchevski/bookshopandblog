@@ -16,9 +16,10 @@
                 <p class="card-text">@Model.Content</p>
 
                 <form asp-controller="Posts" asp-action="Comment">
-                    <textarea style="max-height:5rem; width:60%;" name="commentContent"></textarea>
+                    <textarea style="max-height:5rem; width:60%;" class="form-control" name="commentContent"></textarea>
                     <input type="hidden" name="postId" value="@Model.Id" />
                     <div>
+                        <br />
                         <input type="submit" value="Comment" class="btn btn-outline-secondary" />
                     </div>
                 </form>
@@ -62,6 +63,7 @@
     </div>
 </div>
 
+<br />
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-outline-primary" asp-action="Index">Back to List</a>
 </div>

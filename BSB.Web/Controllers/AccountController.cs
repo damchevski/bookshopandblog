@@ -57,7 +57,9 @@ namespace BSB.Web.Controllers
                         var result = await userManager.CreateAsync(user, request.Password);
                         if (result.Succeeded)
                         {
-                            return RedirectToAction("Login");
+                        await this.userManager.AddToRoleAsync(user, "User");
+
+                        return RedirectToAction("Login");
                         }
                         else
                         {
