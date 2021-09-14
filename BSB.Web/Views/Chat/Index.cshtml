@@ -1,17 +1,20 @@
 ﻿@model List<BSB.Data.ConnectionMapping>
-<h3>Welcome To Public Chat</h3>
+<h3 style="text-align: center">Welcome To Public Chat</h3>
+<hr />
 @{
     string url = "https://cdn.jsdelivr.net/npm/@aspnet/signalr@1.0.0-rc1-update1/dist/browser/signalr.min.js";
 
 }
 <div class="signalr-demo">
-    <div id="senderUId">@Model.Where(x=>x.ConnectionId == null).FirstOrDefault().UserId</div>
-    <form id="messageform">
-        <input type="text" id="messagebox" />
-        <input type="button" value="Send Message" id="btnSend" />
+    <ul id="messageList"></ul>
+
+    <br />
+
+    <div id="senderUId" style="display:none">@Model.Where(x => x.ConnectionId == null).FirstOrDefault().UserId</div>
+    <form id="messageform" class="m-2">
+        <input type="text" id="messagebox" placeholder="Type your message here..." style="width: 15rem" />
+        <input type="button" value="Send Message" id="btnSend" class="btn btn-outline-primary" />
     </form>
-    <hr />
-    <ul id="messageList" style="text-align:left;"></ul>
 </div>
 
 <script src="@url"></script>
@@ -52,14 +55,40 @@
     function appendLine(uid, message) {
         console.log(uid)
         console.log(message)
+
         let nameElement = document.createElement('strong');
+
         nameElement.innerText = `${uid}:`;
         let msgElement = document.createElement('em');
+
         msgElement.innerText = ` ${message}`;
         let li = document.createElement('li');
+        li.classList.add('m-1')
+
         li.appendChild(nameElement);
         li.appendChild(msgElement);
+
         $('#messageList').append(li);
     };
 </script>
 
+<style>
+    #messageList {
+        list-style: none;
+        padding: 0;
+    }
+
+
+    #messageList li {
+        width: 65%;
+        background-color: #DDDDDD;
+        padding: 6px;
+        padding-left: 10px;
+        border: 2px solid gray;
+        border-radius: 15px;
+        overflow-wrap: break-word;
+    }
+    #messageform{
+        
+    }
+</style>

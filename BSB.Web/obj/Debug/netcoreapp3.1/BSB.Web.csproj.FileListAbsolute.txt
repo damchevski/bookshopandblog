@@ -1018,3 +1018,6 @@ C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\View
 C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Edit.cshtml.g.cs
 C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Index.cshtml.g.cs
 C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\GetCartInfo.cshtml.g.cs
+C:\Users\markom\source\repos\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\markom\source\repos\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\markom\source\repos\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Chat\Index.cshtml.g.cs
