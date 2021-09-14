@@ -15,6 +15,9 @@ namespace BSB.Web.Hubs
 
         public async Task SendMessage(string sender, string message)
         {
+            if (message.Trim().Equals(""))
+                return;
+
             var senderConnId = connectionMappings.Where(x => x.UserId.Equals( sender)).FirstOrDefault().ConnectionId;
 
             await Clients.All.SendAsync("ReceiveMessage", message, sender);

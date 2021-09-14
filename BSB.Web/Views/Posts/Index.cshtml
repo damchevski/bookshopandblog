@@ -9,19 +9,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 style="text-align: center;">Book Shop & Blog</h1>
 
-<div class="container" style="text-align: center;">
+
+<div class="container" style="text-align: center; width: 1200px">
+    <h1>Book Shop & Blog</h1>
     @if (SignInManager.IsSignedIn(User))
     {
         <a class="btn btn-primary"
-                asp-action="Create" style="        float: left;
-        margin-left: 416px; text-align: center">
+           asp-action="Create" style="display: inline-block">
             Create a post
         </a>
-      }
+    }
 
-    <div class="dropdown ml-3" style="float: left; text-align: center">
+    <div class="dropdown ml-3" style="display: inline-block">
         <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Pick a topic
         </button>
@@ -41,39 +41,52 @@
 
         </div>
     </div>
-        <br /><br />
+
 </div>
 
+<br />
 <div style="width: 1200px;" class="text-center">
     @foreach (var post in Model)
     {
-        <div  class="card text-center" style="width: 23rem; height: 15rem;  display: inline-block; margin: 3px">
+        <div  class="card text-center" style="width: 23rem; height: 16.5rem;  display: inline-block; margin: 3px">
             <div class="card-body">
                 <h5 class="card-title">@post.ByUser.FristName @post.ByUser.LastName</h5>
                 <h6 class="card-subtitle mb-2 text-muted">@post.Topic</h6>
                 <p class="card-text">@post.Content</p>
 
                 <div>
-                    <div style="float:left">
+                    <div style="display: inline-block">
                         <h6>
                             @post.Likes Likes
                         </h6>
                         <a asp-action="Like" asp-route-postId="@post.Id" class="card-link btn btn-outline-secondary">Like post</a>
                     </div>
-                    <div style="float:left; margin-left: 10px">
+                    <div style="display: inline-block">
                         <h6>@post.CommentsInPost.Count Comments</h6>
                         <a asp-action="Details" asp-route-id="@post.Id" class="card-link btn btn-outline-secondary">View Comments</a>
                     </div>
-                </div>
 
-                @if (UserManager.GetUserId(User).Equals(post.ByUser.Id))
+                </div>
+                <br />                @if (UserManager.GetUserId(User).Equals(post.ByUser.Id))
                 {
                     <div>
-                        <br /><br /><br />
-                        <div style="float: left">
+
+                        <div style="display: inline-block">
                             <a asp-controller="Posts" asp-action="Edit" asp-route-id="@post.Id" class="btn btn-info">Edit</a>
                         </div>
-                        <div style="float: left;margin-left: 10px">
+                        <div style="display: inline-block">
+                            <a asp-controller="Posts" asp-action="Delete" asp-route-id="@post.Id" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div style="visibility: hidden">
+
+                        <div style="display: inline-block">
+                            <a asp-controller="Posts" asp-action="Edit" asp-route-id="@post.Id" class="btn btn-info">Edit</a>
+                        </div>
+                        <div style="display: inline-block">
                             <a asp-controller="Posts" asp-action="Delete" asp-route-id="@post.Id" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
