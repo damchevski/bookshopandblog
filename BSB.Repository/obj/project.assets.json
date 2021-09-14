@@ -5464,24 +5464,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Damchevski\\.nuget\\packages\\": {},
-    "E:\\Visual Studio\\NuGetPackages": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj",
       "projectName": "BSB.Repository",
-      "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj",
-      "packagesPath": "C:\\Users\\Damchevski\\.nuget\\packages\\",
-      "outputPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\bookshopandblog\\BSB.Repository\\BSB.Repository.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\bookshopandblog\\BSB.Repository\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "E:\\Visual Studio\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Damchevski\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5495,8 +5490,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
-              "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
+            "C:\\Users\\DELL\\Desktop\\bookshopandblog\\BSB.Data\\BSB.Data.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\bookshopandblog\\BSB.Data\\BSB.Data.csproj"
             }
           }
         }
@@ -5531,16 +5526,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Repository\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

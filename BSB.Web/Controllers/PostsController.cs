@@ -45,16 +45,20 @@ namespace BSB.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Comment(string commentContent, Guid postId)
+        public async Task<IActionResult> Comment(string? commentContent, Guid postId)
         {
+             
             if (ModelState.IsValid) {
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                var res = await this._postService.CommentOnPost(commentContent, postId, userId);
-                
+                    if (commentContent != null && !commentContent.Trim().Equals(""))
+                    {
 
-                if (res == null)
-                    throw new Exception("All Fields Required");
+                        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                        var res = await this._postService.CommentOnPost(commentContent, postId, userId);
 
+
+                        if (res == null)
+                            throw new Exception("All Fields Required");
+                    }
                 return RedirectToAction("Details", new { id = postId });
             }
             return View(postId);

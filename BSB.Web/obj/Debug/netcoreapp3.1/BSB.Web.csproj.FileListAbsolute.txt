@@ -994,3 +994,27 @@ E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopa
 E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Chat\Index.cshtml.g.cs
 E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Core.dll
 E:\папка\финки\6 семестар\integrirani sistemi\Proekt\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\GemBox.Document.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Stripe.net.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\Twilio.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\GemBox.Document.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Chat\Index.cshtml.g.cs
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Order\Details.cshtml.g.cs
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Order\GetOrders.cshtml.g.cs
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Create.cshtml.g.cs
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Delete.cshtml.g.cs
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Details.cshtml.g.cs
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Edit.cshtml.g.cs
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Index.cshtml.g.cs
+C:\Users\DELL\Desktop\bookshopandblog\BSB.Web\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\GetCartInfo.cshtml.g.cs
