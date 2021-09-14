@@ -5445,19 +5445,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\markom\\.nuget\\packages\\": {}
+    "C:\\Users\\Damchevski\\.nuget\\packages\\": {},
+    "E:\\Visual Studio\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Data\\BSB.Data.csproj",
+      "projectUniqueName": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj",
       "projectName": "BSB.Data",
-      "projectPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Data\\BSB.Data.csproj",
-      "packagesPath": "C:\\Users\\markom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\markom\\source\\repos\\bookshopandblog\\BSB.Data\\obj\\",
+      "projectPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\BSB.Data.csproj",
+      "packagesPath": "C:\\Users\\Damchevski\\.nuget\\packages\\",
+      "outputPath": "E:\\папка\\финки\\6 семестар\\integrirani sistemi\\Proekt\\bookshopandblog\\BSB.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "E:\\Visual Studio\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\markom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Damchevski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5511,7 +5516,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
       }
     }
   }

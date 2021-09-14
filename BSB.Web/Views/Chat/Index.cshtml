@@ -6,15 +6,16 @@
 
 }
 <div class="signalr-demo">
+    <form id="messageform" class="m-2">
+        <input type="text" id="messagebox" class="form-control" placeholder="Type your message here..." style="width: 15rem; display: inline-block" />
+        <input type="button" style="display: inline-block" value="Send Message" id="btnSend" class="btn btn-outline-primary" />
+    </form>
     <ul id="messageList"></ul>
 
     <br />
 
     <div id="senderUId" style="display:none">@Model.Where(x => x.ConnectionId == null).FirstOrDefault().UserId</div>
-    <form id="messageform" class="m-2">
-        <input type="text" id="messagebox" placeholder="Type your message here..." style="width: 15rem" />
-        <input type="button" value="Send Message" id="btnSend" class="btn btn-outline-primary" />
-    </form>
+
 </div>
 
 <script src="@url"></script>
@@ -79,15 +80,15 @@
     }
 
 
-    #messageList li {
-        width: 65%;
-        background-color: #DDDDDD;
-        padding: 6px;
-        padding-left: 10px;
-        border: 2px solid gray;
-        border-radius: 15px;
-        overflow-wrap: break-word;
-    }
+        #messageList li {
+            width: 65%;
+            background-color: powderblue;
+            padding: 6px;
+            padding-left: 10px;
+            border: 2px solid gray;
+            border-radius: 15px;
+            overflow-wrap: break-word;
+        }
     #messageform{
         
     }

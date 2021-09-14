@@ -22,7 +22,7 @@
                     <th scope="row">@(i+1)</th>
                     <td>@item.User.Email</td>
                     <td>@item.ProductInOrders.Count()</td>
-                    <td><a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Details</a></td>
+                    <td><a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a></td>
                 </tr>
 
             }
