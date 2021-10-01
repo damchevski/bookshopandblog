@@ -59,7 +59,14 @@
                         <h6>
                             @post.Likes Likes
                         </h6>
-                        <a asp-action="Like" asp-route-postId="@post.Id" class="card-link btn btn-outline-secondary">Like post</a>
+
+                        @if (post.LikedByUsers.Contains(User.Identity.Name)) {
+                            <a asp-action="Unike" asp-route-postId="@post.Id" asp-route-userEmail="@User.Identity.Name" class="card-link btn btn-secondary">Unlike post</a>
+                        }
+                        else {
+                            <a asp-action="Like" asp-route-postId="@post.Id" asp-route-userEmail="@User.Identity.Name" class="card-link btn btn-outline-secondary">Like post</a>
+                        }
+
                     </div>
                     <div style="display: inline-block">
                         <h6>@post.CommentsInPost.Count Comments</h6>

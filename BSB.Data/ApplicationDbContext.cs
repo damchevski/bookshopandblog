@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json;
 
 namespace BSB.Data
 {
@@ -76,6 +79,12 @@ namespace BSB.Data
                 .HasOne<BSBUser>(z => z.ByUser)
                 .WithMany(z => z.Posts)
                 .HasForeignKey(z => z.ByUserId);
+
+            builder.Entity<Post>().Property(p => p.LikedByUsers)
+                .HasConversion(
+                    v => JsonSerializer.Serialize(v, default),
+                    v => JsonSerializer.Deserialize<List<string>>(v, default));
+
         }
     }
     }

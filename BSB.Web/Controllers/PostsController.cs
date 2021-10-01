@@ -167,13 +167,23 @@ namespace BSB.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public async Task<IActionResult> Like(Guid postId)
+        public async Task<IActionResult> Like(Guid postId, string userEmail)
         {
             if (postId == null) {
                 return NotFound();
             }
 
-            var post = await this._postService.Like(postId);
+            var post = await this._postService.Like(postId, userEmail);
+
+            return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Unike(Guid postId, string userEmail)
+        {
+            if (postId == null) {
+                return NotFound();
+            }
+
+            var post = await this._postService.Unlike(postId, userEmail);
 
             return RedirectToAction(nameof(Index));
         }

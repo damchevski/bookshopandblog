@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BSB.Data.Entity {
@@ -12,6 +13,7 @@ namespace BSB.Data.Entity {
         public BSBUser ByUser { get; set; }
         public string ByUserId { get; set; }
         public virtual ICollection<CommentInPost> CommentsInPost { get; set; }
+        public List<String> LikedByUsers { get; set; }
 
     }
 }

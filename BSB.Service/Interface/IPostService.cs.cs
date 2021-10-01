@@ -14,7 +14,8 @@ namespace BSB.Service.Interface
         Task<Post> EditPost(Post Post);
         Task<Post> DeletePost(Guid? id);
         Task<List<string>> GetTopics();
-        Task<Post> Like(Guid postId);
+        Task<Post> Like(Guid postId, string UserEmail);
+        Task<Post> Unlike(Guid postId, string UserEmail);
         Task<CommentInPost> CommentOnPost(string commentContent, Guid postId, string userId);
     }
 }

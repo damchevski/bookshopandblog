@@ -33,6 +33,7 @@ namespace BSB.Service.Implementation
             Post.ByUser = _userRepository.Get(userId);
             Post.ByUserId = userId;
             Post.Likes = 0;
+            Post.LikedByUsers = new List<string>();
 
             return await this._postRepository.AddPost(Post);
         }
@@ -103,11 +104,22 @@ namespace BSB.Service.Implementation
             return await this._postRepository.GetAllTopics();
         }
 
-        public async Task<Post> Like(Guid postId)
+        public async Task<Post> Like(Guid postId, string userEmail)
         {
             var post = await _postRepository.GetPost(postId);
-            //fix user being to like a post infinite times
+
             post.Likes += 1;
+            post.LikedByUsers.Add(userEmail);
+
+            return await this._postRepository.EditPost(post);
+        }
+
+        public async Task<Post> Unlike(Guid postId, string userEmail)
+        {
+            var post = await _postRepository.GetPost(postId);
+
+            post.Likes -= 1;
+            post.LikedByUsers.Remove(userEmail);
 
             return await this._postRepository.EditPost(post);
         }
