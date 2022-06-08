@@ -4,7 +4,6 @@ using BSB.Repository.Implementation;
 using BSB.Repository.Interface;
 using BSB.Service.Implementation;
 using BSB.Service.Interface;
-using BSB.Web.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,21 +12,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Stripe;
-using Twilio.Clients;
 
 namespace BSB.Web
 {
     public class Startup
     {
-        private EmailSettings emailService;
 
         public Startup(IConfiguration configuration)
         {
-            emailService = new EmailSettings();
             Configuration = configuration;
-            Configuration.GetSection("EmailSettings").Bind(emailService);
-
         }
 
         public IConfiguration Configuration { get; }
@@ -38,35 +31,18 @@ namespace BSB.Web
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<BSBUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<MAUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             //DI for Repositories
-            services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
-            services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
+            services.AddScoped(typeof(IMoviesRepository), typeof(MoviesRepository));
             services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
-            services.AddScoped(typeof(IEmailRepository), typeof(EmailRepository));
-            services.AddScoped(typeof(IShoppingCartRepository), typeof(ShoppingCartRepository));
-            services.AddScoped(typeof(IPostRepository), typeof(PostRepository));
-            services.AddScoped(typeof(ICommentRepository), typeof(CommentRepository));
-
-            //Sms Configuration
-            services.AddHttpClient<ITwilioRestClient, TwilioClient>();
-
-            //Stripe Configuration
-            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+            services.AddScoped(typeof(IFavMoviesRepository), typeof(FavMoviesRepository));
 
             //DI for Services
-            services.AddTransient(typeof(IProductService), typeof(BSB.Service.Implementation.ProductService));
-            services.AddTransient(typeof(IOrderService), typeof(BSB.Service.Implementation.OrderService));
-            services.AddTransient(typeof(IShoppingCartService), typeof(BSB.Service.Implementation.ShoppingCartService));
-            services.AddTransient(typeof(IPostService), typeof(PostService));
-            services.AddTransient(typeof(ICommentService), typeof(CommentService));
-
-            services.AddScoped<IEmailService, EmailService>(email => new EmailService(emailService));
-
-            services.AddScoped<EmailSettings>(es => emailService);
+            services.AddTransient(typeof(IMoviesService), typeof(BSB.Service.Implementation.MoviesService));
+            services.AddTransient(typeof(IFavMoviesService), typeof(BSB.Service.Implementation.FavMoviesService));
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -84,8 +60,6 @@ namespace BSB.Web
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
-            StripeConfiguration.ApiKey = Configuration.GetSection("Stripe")["SecretKey"];
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -99,11 +73,6 @@ namespace BSB.Web
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
-            app.UseSignalR(routes =>
-            {
-                routes.MapHub<ChatHub>("/Chat/Index");
-            });
 
             app.UseRouting();
 

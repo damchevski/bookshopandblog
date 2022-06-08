@@ -1,0 +1,28 @@
+﻿@model BSB.Data.Dto.AddToFavouritesDto
+
+@{
+    ViewData["Title"] = "Add To Shopping Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1 style="text-align: center">Add Selected Movie to User Favourites ?</h1>
+
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4 m-auto">
+        <form asp-action="AddMovieToFavourites" method="post">
+            <input type="hidden" asp-for="MovieId" />
+            <div class="form-group">
+                <label asp-for="SelectedMovie.Name"></label>
+                <input disabled asp-for="SelectedMovie.Name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-info" />
+            </div>
+        </form>
+    </div>
+</div>

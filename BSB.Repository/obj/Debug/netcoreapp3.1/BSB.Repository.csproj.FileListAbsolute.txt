@@ -59,3 +59,16 @@ C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.dll
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.pdb
 C:\Users\markom\source\repos\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Repository.deps.json
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Repository.dll
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Repository.pdb
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Data.dll
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\bin\Debug\netcoreapp3.1\BSB.Data.pdb
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.csproj.AssemblyReference.cache
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.AssemblyInfoInputs.cache
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.AssemblyInfo.cs
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.csproj.CoreCompileInputs.cache
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.csproj.CopyComplete
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.dll
+C:\Projects\MovieShop\bookshopandblog\BSB.Repository\obj\Debug\netcoreapp3.1\BSB.Repository.pdb

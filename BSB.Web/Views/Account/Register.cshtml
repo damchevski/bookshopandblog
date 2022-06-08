@@ -50,16 +50,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label asp-for="@Model.Address" class="col-lg-3 control-label"></label>
-                            <br>
-                            <div class="col-lg-9">
-                                @Html.TextBoxFor(m => m.Address, new { placeholder = "Address", @class = "form-control" })
-                                @Html.ValidationMessageFor(m => m.Address)
-                            </div>
-                        </div>
-
-
-                        <div class="form-group row">
                             <label asp-for="@Model.Password" class="col-lg-3 control-label"></label>
                             <br>
                             <div class="col-lg-9">

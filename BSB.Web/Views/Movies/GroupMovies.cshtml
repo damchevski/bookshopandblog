@@ -1,0 +1,64 @@
+﻿@model BSB.Data.Dto.GroupMoviesDto
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<BSB.Data.Entity.MAUser> SignInManager
+@inject UserManager<BSB.Data.Entity.MAUser> UserManager
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    <div class="container text-center" style="width: 67.5rem">
+        <div class="row justify-content-center">
+            <form asp-action="GroupMovies" class="form-inline">
+
+                <select style="display: inline-block" class="custom-select m-2" id="Genre" name="Genre">
+                    <option selected>Choose...</option>
+                    @foreach (var opt in Model.Genres) {
+                        <option value="@opt">@opt</option>
+                    }
+                </select>
+
+
+                <input class="btn btn-primary" style="display: inline-block" type="submit" value="Group Books" />
+
+            </form>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div style="width: 67.5rem;" class="text-center">
+        <ul>
+            @foreach (var movie in Model.Movies) {
+                <div class="card text-center" style="width: 16rem; display:inline-block; margin: 3px">
+                    <img class="card-img-top" src="@movie.Image alt="Product image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@movie.Name</h5>
+                        <p class="card-text">Book Genre: @movie.Genre</p>
+     
+
+                        @if (SignInManager.IsSignedIn(User)) {
+                            <p class="card-text">
+                                <a class="btn btn-outline-primary" asp-action="AddToFavourites"
+                                   asp-controller="Movies"
+                                   asp-route-id="@movie.Id">Add To Favourites</a>
+                            </p>
+                        }
+
+                        @if (User.IsInRole("Admin")) {
+                            <p class="card-text">
+                                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@movie.Id">Edit</a> |
+                                <a class="btn btn-primary" asp-action="Details" asp-route-id="@movie.Id">Details</a> |
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@movie.Id">Delete</a>
+                            </p>
+                        }
+
+                    </div>
+                </div>
+            }
+        </ul>
+
+    </div>
+
+}

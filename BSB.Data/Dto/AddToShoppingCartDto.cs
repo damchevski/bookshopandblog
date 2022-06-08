@@ -5,13 +5,11 @@ using System.Text;
 
 namespace BSB.Data.Dto
 {
-    public class AddToShoppingCartDto
+    public class AddToFavouritesDto
     {
-        public Product SelectedProduct { get; set; }
+        public Movie SelectedMovie { get; set; }
 
-        public Guid ProductId { get; set; }
-
-        public int Quantity { get; set; }
+        public Guid MovieId { get; set; }
 
     }
 }

@@ -1,0 +1,15 @@
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\bin\Debug\netcoreapp3.1\MA.Service.deps.json
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\bin\Debug\netcoreapp3.1\MA.Service.dll
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\bin\Debug\netcoreapp3.1\MA.Service.pdb
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\bin\Debug\netcoreapp3.1\MA.Data.dll
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\bin\Debug\netcoreapp3.1\MA.Repository.dll
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\bin\Debug\netcoreapp3.1\MA.Data.pdb
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\bin\Debug\netcoreapp3.1\MA.Repository.pdb
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\obj\Debug\netcoreapp3.1\MA.Service.csproj.AssemblyReference.cache
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\obj\Debug\netcoreapp3.1\MA.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\obj\Debug\netcoreapp3.1\MA.Service.AssemblyInfoInputs.cache
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\obj\Debug\netcoreapp3.1\MA.Service.AssemblyInfo.cs
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\obj\Debug\netcoreapp3.1\MA.Service.csproj.CoreCompileInputs.cache
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\obj\Debug\netcoreapp3.1\MA.Service.csproj.CopyComplete
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\obj\Debug\netcoreapp3.1\MA.Service.dll
+C:\Projects\moviesapplication\MoviesAPP\BSB.Service\obj\Debug\netcoreapp3.1\MA.Service.pdb

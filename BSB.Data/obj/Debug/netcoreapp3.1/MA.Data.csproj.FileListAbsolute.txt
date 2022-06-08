@@ -1,0 +1,9 @@
+C:\Projects\moviesapplication\MoviesAPP\BSB.Data\bin\Debug\netcoreapp3.1\MA.Data.deps.json
+C:\Projects\moviesapplication\MoviesAPP\BSB.Data\bin\Debug\netcoreapp3.1\MA.Data.dll
+C:\Projects\moviesapplication\MoviesAPP\BSB.Data\bin\Debug\netcoreapp3.1\MA.Data.pdb
+C:\Projects\moviesapplication\MoviesAPP\BSB.Data\obj\Debug\netcoreapp3.1\MA.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\moviesapplication\MoviesAPP\BSB.Data\obj\Debug\netcoreapp3.1\MA.Data.AssemblyInfoInputs.cache
+C:\Projects\moviesapplication\MoviesAPP\BSB.Data\obj\Debug\netcoreapp3.1\MA.Data.AssemblyInfo.cs
+C:\Projects\moviesapplication\MoviesAPP\BSB.Data\obj\Debug\netcoreapp3.1\MA.Data.csproj.CoreCompileInputs.cache
+C:\Projects\moviesapplication\MoviesAPP\BSB.Data\obj\Debug\netcoreapp3.1\MA.Data.dll
+C:\Projects\moviesapplication\MoviesAPP\BSB.Data\obj\Debug\netcoreapp3.1\MA.Data.pdb
