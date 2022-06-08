@@ -44,13 +44,3 @@ C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BS
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.dll
 C:\Users\markom\Source\Repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.pdb
 C:\Users\markom\source\repos\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\bin\Debug\netcoreapp3.1\BSB.Data.deps.json
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\bin\Debug\netcoreapp3.1\BSB.Data.dll
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\bin\Debug\netcoreapp3.1\BSB.Data.pdb
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.csproj.AssemblyReference.cache
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.AssemblyInfoInputs.cache
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.AssemblyInfo.cs
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.csproj.CoreCompileInputs.cache
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.dll
-C:\Projects\MovieShop\bookshopandblog\BSB.Data\obj\Debug\netcoreapp3.1\BSB.Data.pdb

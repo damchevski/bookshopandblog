@@ -19,31 +19,16 @@ namespace BSB.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BSB.Data.Entity.FavouriteMovies", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique()
-                        .HasFilter("[UserId] IS NOT NULL");
-
-                    b.ToTable("FavouriteMovies");
-                });
-
-            modelBuilder.Entity("BSB.Data.Entity.MAUser", b =>
+            modelBuilder.Entity("BSB.Data.Entity.BSBUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -108,19 +93,140 @@ namespace BSB.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("BSB.Data.Entity.Movie", b =>
+            modelBuilder.Entity("BSB.Data.Entity.Comment", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
+                    b.Property<string>("ByUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Director")
-                        .IsRequired()
+                    b.HasKey("Id");
+
+                    b.HasIndex("ByUserId");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.CommentInPost", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CommentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CommentId1")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PostId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.HasIndex("CommentId1")
+                        .IsUnique();
+
+                    b.ToTable("CommentInPosts");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.CommentInUser", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CommentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CommentInUsers");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.EmailMessage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MailTo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Subject")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EmailMessages");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.Order", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.Post", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ByUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Likes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Topic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ByUserId");
+
+                    b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Genre")
                         .IsRequired()
@@ -130,34 +236,85 @@ namespace BSB.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsForBuy")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<float>("Price")
+                        .HasColumnType("real");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Movies");
+                    b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("BSB.Data.Entity.UserFavMovie", b =>
+            modelBuilder.Entity("BSB.Data.Entity.ProductInOrder", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("FavMoviesId")
+                    b.Property<Guid>("OrderId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("MovieId")
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductInOrders");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.ProductInShoppingCart", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("ShoppingCartId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FavMoviesId");
+                    b.HasIndex("ProductId");
 
-                    b.HasIndex("MovieId");
+                    b.HasIndex("ShoppingCartId");
 
-                    b.ToTable("UserFavMovie");
+                    b.ToTable("ProductInShoppingCarts");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.ShoppingCart", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique()
+                        .HasFilter("[UserId] IS NOT NULL");
+
+                    b.ToTable("ShoppingCarts");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -295,26 +452,90 @@ namespace BSB.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("BSB.Data.Entity.FavouriteMovies", b =>
+            modelBuilder.Entity("BSB.Data.Entity.Comment", b =>
                 {
-                    b.HasOne("BSB.Data.Entity.MAUser", "User")
-                        .WithOne("UserFavouriteMovies")
-                        .HasForeignKey("BSB.Data.Entity.FavouriteMovies", "UserId");
+                    b.HasOne("BSB.Data.Entity.BSBUser", "ByUser")
+                        .WithMany()
+                        .HasForeignKey("ByUserId");
                 });
 
-            modelBuilder.Entity("BSB.Data.Entity.UserFavMovie", b =>
+            modelBuilder.Entity("BSB.Data.Entity.CommentInPost", b =>
                 {
-                    b.HasOne("BSB.Data.Entity.Movie", "Movie")
-                        .WithMany("FavOnUsers")
-                        .HasForeignKey("FavMoviesId")
+                    b.HasOne("BSB.Data.Entity.Post", "Post")
+                        .WithMany("CommentsInPost")
+                        .HasForeignKey("CommentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BSB.Data.Entity.FavouriteMovies", "FavMovies")
-                        .WithMany("MovieInUserFavourites")
-                        .HasForeignKey("MovieId")
+                    b.HasOne("BSB.Data.Entity.Comment", "Comment")
+                        .WithOne("CommentInPost")
+                        .HasForeignKey("BSB.Data.Entity.CommentInPost", "CommentId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.CommentInUser", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.Comment", "Comment")
+                        .WithMany()
+                        .HasForeignKey("CommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BSB.Data.Entity.BSBUser", "User")
+                        .WithMany("Comments")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.Order", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.BSBUser", "User")
+                        .WithMany("Orders")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.Post", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.BSBUser", "ByUser")
+                        .WithMany("Posts")
+                        .HasForeignKey("ByUserId");
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.ProductInOrder", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.Product", "Product")
+                        .WithMany("ProductInOrders")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BSB.Data.Entity.Order", "Order")
+                        .WithMany("ProductInOrders")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.ProductInShoppingCart", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.ShoppingCart", "ShoppingCart")
+                        .WithMany("ProductInShoppingCarts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BSB.Data.Entity.Product", "Product")
+                        .WithMany("ProductInShoppingCarts")
+                        .HasForeignKey("ShoppingCartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BSB.Data.Entity.ShoppingCart", b =>
+                {
+                    b.HasOne("BSB.Data.Entity.BSBUser", "User")
+                        .WithOne("UserCart")
+                        .HasForeignKey("BSB.Data.Entity.ShoppingCart", "UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -328,7 +549,7 @@ namespace BSB.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("BSB.Data.Entity.MAUser", null)
+                    b.HasOne("BSB.Data.Entity.BSBUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -337,7 +558,7 @@ namespace BSB.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("BSB.Data.Entity.MAUser", null)
+                    b.HasOne("BSB.Data.Entity.BSBUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -352,7 +573,7 @@ namespace BSB.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BSB.Data.Entity.MAUser", null)
+                    b.HasOne("BSB.Data.Entity.BSBUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -361,7 +582,7 @@ namespace BSB.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("BSB.Data.Entity.MAUser", null)
+                    b.HasOne("BSB.Data.Entity.BSBUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

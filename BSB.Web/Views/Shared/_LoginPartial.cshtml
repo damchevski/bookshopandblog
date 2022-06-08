@@ -1,13 +1,21 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<BSB.Data.Entity.MAUser> SignInManager
-@inject UserManager<BSB.Data.Entity.MAUser> UserManager
+@inject SignInManager<BSB.Data.Entity.BSBUser> SignInManager
+@inject UserManager<BSB.Data.Entity.BSBUser> UserManager
 
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
     {
-
         <li class="nav-item" style="font-size: 18px">
-            <a class="nav-link text-dark" asp-controller="FavMovies" asp-action="GetFavMovies" title="FavMovies">Favourite Movies</a>
+            <a class="nav-link text-dark" asp-controller="Chat" asp-action="Index" title="Posts">Chat</a>
+        </li>
+        <li class="nav-item" style="font-size: 18px">
+            <a class="nav-link text-dark" asp-controller="Posts" asp-action="Index" title="Posts">Blog</a>
+        </li>
+        <li class="nav-item" style="font-size: 18px">
+            <a class="nav-link text-dark" asp-controller="Order" asp-action="GetOrders" title="Orders">Orders</a>
+        </li>
+        <li class="nav-item" style="font-size: 18px">
+            <a class="nav-link text-dark" asp-controller="ShoppingCart" asp-action="GetCartInfo" title="ShoppingCart">Shopping Cart</a>
         </li>
         <li class="nav-item" style="font-size: 18px">
             <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>

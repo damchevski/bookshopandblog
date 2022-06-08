@@ -7,14 +7,14 @@ namespace BSB.Repository.Interface
 {
     public interface IUserRepository
     {
-        IEnumerable<MAUser> GetAll();
-        MAUser Get(string id);
+        IEnumerable<BSBUser> GetAll();
+        BSBUser Get(string id);
 
-        void Insert(MAUser entity);
+        void Insert(BSBUser entity);
 
-        void Update(MAUser entity);
+        void Update(BSBUser entity);
 
-        void Delete(MAUser entity);
+        void Delete(BSBUser entity);
 
     }
 }

@@ -12,15 +12,15 @@ namespace BSB.Repository.Implementation
     public class UserRepository : IUserRepository
     {
         private readonly ApplicationDbContext context;
-        private DbSet<MAUser> entities;
+        private DbSet<BSBUser> entities;
         string errorMessage = string.Empty;
 
         public UserRepository(ApplicationDbContext context)
         {
             this.context = context;
-            entities = context.Set<MAUser>();
+            entities = context.Set<BSBUser>();
         }
-        public void Delete(MAUser entity)
+        public void Delete(BSBUser entity)
         {
             if (entity == null)
             {
@@ -30,21 +30,21 @@ namespace BSB.Repository.Implementation
             context.SaveChanges();
         }
 
-        public MAUser Get(string id)
+        public BSBUser Get(string id)
         {
             return entities
-                 .Include(z => z.UserFavouriteMovies)
-                 .Include("UserFavouriteMovies.MovieInUserFavourites")
-                 .Include("UserFavouriteMovies.MovieInUserFavourites.Movie")
+                 .Include(z => z.UserCart)
+                 .Include("UserCart.ProductInShoppingCarts")
+                 .Include("UserCart.ProductInShoppingCarts.Product")
                  .SingleOrDefault(s => s.Id == id);
         }
 
-        public IEnumerable<MAUser> GetAll()
+        public IEnumerable<BSBUser> GetAll()
         {
             return entities.AsEnumerable();
         }
 
-        public void Insert(MAUser entity)
+        public void Insert(BSBUser entity)
         {
             if (entity == null)
             {
@@ -54,7 +54,7 @@ namespace BSB.Repository.Implementation
             context.SaveChanges();
         }
 
-        public void Update(MAUser entity)
+        public void Update(BSBUser entity)
         {
             if (entity == null)
             {

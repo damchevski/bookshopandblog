@@ -13,11 +13,11 @@ namespace BSB.Web.Controllers
 {
     public class AccountController : Controller
     {
-            private readonly UserManager<MAUser> userManager;
-            private readonly SignInManager<MAUser> signInManager;
+            private readonly UserManager<BSBUser> userManager;
+            private readonly SignInManager<BSBUser> signInManager;
 
-            public AccountController(UserManager<MAUser> userManager,
-                SignInManager<MAUser> signInManager)
+            public AccountController(UserManager<BSBUser> userManager,
+                SignInManager<BSBUser> signInManager)
             {
 
                 this.userManager = userManager;
@@ -40,7 +40,7 @@ namespace BSB.Web.Controllers
                     var userCheck = await userManager.FindByEmailAsync(request.Email);
                     if (userCheck == null)
                     {
-                        var user = new MAUser
+                        var user = new BSBUser
                         {
                             UserName = request.Email,
                             NormalizedUserName = request.Email,
@@ -50,7 +50,8 @@ namespace BSB.Web.Controllers
                             FristName = request.FirstName,
                             LastName = request.LastName,
                             PhoneNumber = request.PhoneNumber,
-                            UserFavouriteMovies = new FavouriteMovies()
+                            Address = request.Address,
+                            UserCart = new ShoppingCart()
                      };
 
                         var result = await userManager.CreateAsync(user, request.Password);

@@ -5,8 +5,10 @@ using System.Text;
 
 namespace BSB.Data.Dto
 {
-    public class FavouritesDto
+    public class ShoppingCartDto
     {
-        public List<UserFavMovie> Movies { get; set; }
+        public List<ProductInShoppingCart> Products { get; set; }
+
+        public double TotalPrice { get; set; }
     }
 }
